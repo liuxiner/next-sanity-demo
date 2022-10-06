@@ -14,7 +14,11 @@ expect "]*"
 
 send "cd /home/admin/projects\r"
 send "cd next-sanity-demo\r"
+
+interact
+
 send "git pull\r"
+
 # expect "Username for 'https://github.com':"
 # send "CODZR\r"
 # expect "Password for 'https://github.com':"
