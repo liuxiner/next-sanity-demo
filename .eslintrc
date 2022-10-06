@@ -1,0 +1,61 @@
+{
+  "extends": ["next"],
+  "rules": {
+    "react/jsx-no-target-blank": [2, { "allowReferrer": true }],
+    "react/display-name": [0, { "ignoreTranspilerName": false }],
+    "arrow-parens": 0,
+    "generator-star-spacing": 0,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always",
+      {
+        "omitLastInOneLineBlock": true
+      }
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "space-before-function-paren": 0,
+    "eol-last": 1,
+    "eqeqeq": 2,
+    "no-undef": 0,
+    "no-unused-vars": "off",
+    "no-useless-escape": "off",
+    "max-len": [
+      "error",
+      800,
+      4,
+      {
+        "ignoreUrls": true,
+        "ignorePattern": "d.*"
+      }
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all",
+        "ignoreReadBeforeAssign": false
+      }
+    ],
+    "import/no-unresolved": [0],
+    "import/extensions": "off",
+    "import/no-absolute-path": "off",
+    "no-async-promise-executor": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-console": "off",
+    "no-plusplus": "off",
+    "no-bitwise": "off",
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/explicit-module-boundary-types": ["off"],
+    "@typescript-eslint/ban-ts-comment": ["off"],
+    "@typescript-eslint/no-empty-function": ["off"],
+    "@typescript-eslint/no-unused-vars": [0],
+    "no-param-reassign": ["off"],
+    "@typescript-eslint/no-this-alias": ["off"]
+  }
+}
