@@ -5,11 +5,6 @@ import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import useWeb3Forms from 'use-web3forms';
 import { configQuery } from '@lib/groq';
-import {
-  LocationMarkerIcon,
-  MailIcon,
-  PhoneIcon
-} from '@heroicons/react/outline';
 export default function Contact({ siteconfig }) {
   const {
     register,
@@ -64,12 +59,10 @@ export default function Contact({ siteconfig }) {
 
             <div className="mt-5">
               <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-                <LocationMarkerIcon className="w-4 h-4" />
                 <span>1734 Sanfransico, CA 93063</span>
               </div>
               {siteconfig?.email && (
                 <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-                  <MailIcon className="w-4 h-4" />
                   <a href={`mailto:${siteconfig.email}`}>
                     {siteconfig.email}
                   </a>
@@ -77,7 +70,6 @@ export default function Contact({ siteconfig }) {
               )}
               {siteconfig?.phone && (
                 <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-                  <PhoneIcon className="w-4 h-4" />
                   <a href={`tel:${siteconfig.phone}`}>
                     {siteconfig.phone}
                   </a>

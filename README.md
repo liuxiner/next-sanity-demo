@@ -1,23 +1,8 @@
-# Stablo Blog Template - Next.js & Sanity CMS
-
-Stablo is a JAMStack Starter template built with Next.js, Tailwind CSS & Sanity CMS by [Web3Templates](https://web3templates.com/).
+# Next Sanity Demo - Next.js & Sanity CMS
 
 **[Click here to see live demo →](https://stablo-template.vercel.app/)**
 
-<a href="https://www.sanity.io/create?template=web3templates%2Fstablo">
-<img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
-</a> 
-
 ###### Click the above button for one-click clone & deploy for this template. Read [quick start](#quick-start) guide below. 
-
-#### Template Preview
-
-[![Next.js Front-end Preview](https://user-images.githubusercontent.com/1884712/169838344-e32b7426-621a-45a4-aba8-afedf3377e1f.jpeg)](https://stablo-template.vercel.app/)
-
-#### Sanity CMS Preview
-
-[![Backend Sanity CMS Preview](https://user-images.githubusercontent.com/1884712/170030678-c6e32d47-0b92-42b7-ac2d-f3cf800c0969.png)](https://stablo-template.vercel.app/studio)
-
 
 ## Quick Start
 
@@ -33,14 +18,6 @@ To use this template and configure sanity and deploying to vercel, we recommend 
 - Import Demo Content (as seen in live demo)
 - Deploy to Vercel
  
-
-<a href="https://www.sanity.io/create?template=web3templates%2Fstablo">
-<img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
-</a>
-
-
-To setup one click deployment, click the above link below and follow the steps. 
-
 ## Local Development
 
 Again, we recommend you to use the one-click deploy first which will create a github repo. You can then clone the github repo to your local system and change following `.env` variables. 
@@ -81,7 +58,8 @@ or you can directly replace the project ID in the `/studio/sanity.json`
 You can use the normal Next.js method to run the frontend. Just run the following command and a live server will open on `http://localhost:3000`
 
 ```
-yarn dev
+pnpm i
+pnpm dev
 ```
 
 
@@ -98,9 +76,9 @@ npm install -g @sanity/cli
 To run sanity studio server, run the following command in your terminal.  It will open a live server on `http://localhost:3333`
 
 ```
-yarn sanity
+pnpm sanity
 # or
-cd studio && sanity start
+cd studio && pnpm start
 ```
 
 ## Sponsor

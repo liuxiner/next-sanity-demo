@@ -1,6 +1,5 @@
 // import { useState, useEffect } from "react";
 import { useTheme } from 'next-themes';
-import { SunIcon } from '@heroicons/react/outline';
 
 const ThemeSwitch = () => {
   //   const [mounted, setMounted] = useState(false);
@@ -17,7 +16,6 @@ const ThemeSwitch = () => {
 
   return (
     <div className="inline-flex items-center">
-      <SunIcon className="w-4 h-4 mr-2" />
       <select
         name="themeSwitch"
         value={theme}
