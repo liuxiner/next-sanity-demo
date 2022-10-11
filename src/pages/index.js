@@ -1,19 +1,16 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 import { NextSeo } from 'next-seo';
-import Layout from '@components/layout';
-import Container from '@components/container';
-// import Subpagehero from "@components/sections/subpagehero";
-// import Categories from "@components/categories";
+import Layout from '@comp/layout';
+import Container from '@comp/container';
 import { useRouter } from 'next/router';
-import { getClient, usePreviewSubscription } from '@lib/sanity';
+import { getClient, usePreviewSubscription } from '@/lib/sanity';
+console.log('getClient: ', getClient);
 import defaultOG from '/public/img/opengraph.jpg';
-import { postquery, configQuery } from '@lib/groq';
-import GetImage from '@utils/getImage';
-import PostList from '@components/postlist';
+import { postquery, configQuery } from '@/lib/groq';
+import GetImage from '@/utils/getImage';
+import PostList from '@comp/postlist';
 
 export default function Post(props) {
+  console.log('props: ', props);
   const { postdata, siteconfig, preview } = props;
 
   const router = useRouter();
@@ -37,12 +34,12 @@ export default function Post(props) {
       {posts && siteConfig && (
         <Layout {...siteConfig}>
           <NextSeo
-            title={`Blog — ${siteConfig?.title}`}
+            title={`${siteConfig?.title}`}
             description={siteConfig?.description || ''}
             canonical={siteConfig?.url}
             openGraph={{
               url: siteConfig?.url,
-              title: `Blog — ${siteConfig?.title}`,
+              title: `${siteConfig?.title}`,
               description: siteConfig?.description || '',
               images: [
                 {
@@ -58,17 +55,19 @@ export default function Post(props) {
               cardType: 'summary_large_image'
             }}
           />
-          <Container>
-            <h1 className="text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
-              Archive
-            </h1>
-            <div className="text-center">
-              <p className="mt-2 text-lg">
-                See all posts we have ever written.
-              </p>
+          <Container className="bg-red-50 dark:bg-black">
+            <div className="grid gap-10 lg:gap-10 md:grid-cols-2 ">
+              {posts.slice(0, 2).map(post => (
+                <PostList
+                  key={post._id}
+                  post={post}
+                  aspect="landscape"
+                  preloadImage={true}
+                />
+              ))}
             </div>
             <div className="grid gap-10 mt-10 lg:gap-10 md:grid-cols-2 xl:grid-cols-3 ">
-              {posts.map(post => (
+              {posts.slice(2).map(post => (
                 <PostList
                   key={post._id}
                   post={post}

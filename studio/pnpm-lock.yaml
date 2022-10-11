@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/core': ^7.19.3
   '@sanity/base': ^2.34.0
-  '@sanity/cli': ^2.34.0
   '@sanity/color': ^2.1.16
   '@sanity/components': ^2.14.0
   '@sanity/core': ^2.34.0
@@ -31,7 +30,6 @@ specifiers:
 dependencies:
   '@babel/core': registry.npmmirror.com/@babel/core/7.19.3
   '@sanity/base': registry.npmmirror.com/@sanity/base/2.34.0_spuwmphfmcnhwzdquktmbeppru
-  '@sanity/cli': registry.npmmirror.com/@sanity/cli/2.34.0
   '@sanity/color': registry.npmmirror.com/@sanity/color/2.1.16
   '@sanity/components': registry.npmmirror.com/@sanity/components/2.14.0
   '@sanity/core': registry.npmmirror.com/@sanity/core/2.34.0_bgwbdzpwpu5s4cho6ap7pou5xe
@@ -2089,14 +2087,6 @@ packages:
     dependencies:
       get-random-values-esm: registry.npmmirror.com/get-random-values-esm/1.0.0
       lodash: registry.npmmirror.com/lodash/4.17.21
-    dev: false
-
-  registry.npmmirror.com/@sanity/cli/2.34.0:
-    resolution: {integrity: sha512-AK1LmbsFuAX7IvOQFeBntYQm7X/rR+D3BEbHJi7N8zlc794B/+cVzjUR8GIoqrtQzQ5QZPd9ADnjUni4v8SlJQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@sanity/cli/-/cli-2.34.0.tgz}
-    name: '@sanity/cli'
-    version: 2.34.0
-    engines: {node: '>=12.0.0'}
-    hasBin: true
     dev: false
 
   registry.npmmirror.com/@sanity/client/3.4.1:

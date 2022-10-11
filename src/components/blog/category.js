@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Label from '@components/ui/label';
+import Label from '@comp/ui/label';
 
 export default function CategoryLabel({ categories }) {
   return (

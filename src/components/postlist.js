@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { cx } from '@utils/all';
-import GetImage from '@utils/getImage';
+import { cx } from '@/utils/all';
+import GetImage from '@/utils/getImage';
 import { parseISO, format } from 'date-fns';
-import CategoryLabel from '@components/blog/category';
-
+import CategoryLabel from '@comp/blog/category';
 export default function PostList({ post, aspect, preloadImage }) {
   const imageProps = post?.mainImage
     ? GetImage(post.mainImage)

@@ -16,7 +16,6 @@
   "dependencies": {
     "@babel/core": "^7.19.3",
     "@sanity/base": "^2.34.0",
-    "@sanity/cli": "^2.34.0",
     "@sanity/color": "^2.1.16",
     "@sanity/components": "^2.14.0",
     "@sanity/core": "^2.34.0",
