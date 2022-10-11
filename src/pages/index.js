@@ -3,14 +3,12 @@ import Layout from '@comp/layout';
 import Container from '@comp/container';
 import { useRouter } from 'next/router';
 import { getClient, usePreviewSubscription } from '@/lib/sanity';
-console.log('getClient: ', getClient);
 import defaultOG from '/public/img/opengraph.jpg';
 import { postquery, configQuery } from '@/lib/groq';
 import GetImage from '@/utils/getImage';
 import PostList from '@comp/postlist';
 
 export default function Post(props) {
-  console.log('props: ', props);
   const { postdata, siteconfig, preview } = props;
 
   const router = useRouter();
