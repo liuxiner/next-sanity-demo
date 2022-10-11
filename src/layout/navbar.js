@@ -29,7 +29,7 @@ export default function Navbar(props) {
   return (
     <Container>
       <nav>
-        <div>
+        <div className="flex">
           {
             <>
               <div className="flex justify-between bg-white dark:bg-black items-center w-full md:w-auto">

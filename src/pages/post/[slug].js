@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import Layout from '@comp/layout';
+import Layout from '@/layout';
 import Container from '@comp/container';
 import { useRouter } from 'next/router';
 import client, {

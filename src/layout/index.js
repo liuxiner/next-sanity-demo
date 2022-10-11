@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import GetImage from '@/utils/getImage';
-import Navbar from '@comp/navbar';
+import Navbar from './navbar';
 // import defaultOG from "../../public/img/og-default.jpg";
 
-import Footer from '@comp/footer';
+import Footer from './footer';
 // import PopupWidget from "../components/popupWidget";
 
 export default function Layout(props) {

@@ -1,5 +1,5 @@
 import Container from '@comp/container';
-import Layout from '@comp/layout';
+import Layout from '@/layout';
 import { getClient } from '@/lib/sanity';
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
