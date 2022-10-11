@@ -1,12 +1,15 @@
 import { NextSeo } from 'next-seo';
-import Layout from '@/layout';
+import Layout from 'src/layout';
 import Container from '@comp/container';
 import { useRouter } from 'next/router';
-import { getClient, usePreviewSubscription } from '@/lib/sanity';
+import { getClient, usePreviewSubscription } from 'src/lib/sanity';
 import defaultOG from '/public/img/opengraph.jpg';
-import { postquery, configQuery } from '@/lib/groq';
-import GetImage from '@/utils/getImage';
+import { postquery, configQuery } from 'src/lib/groq';
+import GetImage from 'src/utils/getImage';
 import PostList from '@comp/postlist';
+import styled from 'styled-components';
+
+console.log('styled: ', styled);
 
 export default function Post(props) {
   const { postdata, siteconfig, preview } = props;
@@ -53,7 +56,7 @@ export default function Post(props) {
               cardType: 'summary_large_image'
             }}
           />
-          <Container className="bg-red-50 dark:bg-black">
+          <S.Container className="bg-red-50 dark:bg-black">
             <div className="grid gap-10 lg:gap-10 md:grid-cols-2 ">
               {posts.slice(0, 2).map(post => (
                 <PostList
@@ -73,7 +76,7 @@ export default function Post(props) {
                 />
               ))}
             </div>
-          </Container>
+          </S.Container>
         </Layout>
       )}
     </>
@@ -96,3 +99,10 @@ export async function getStaticProps({ params, preview = false }) {
     revalidate: 10
   };
 }
+
+const S = {
+  Container: styled.span`
+    display: flex;
+    gap: 2px;
+  `,
+};

@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { PortableText } from '@/lib/sanity';
-import GetImage from '@/utils/getImage';
+import { PortableText } from 'src/lib/sanity';
+import GetImage from 'src/utils/getImage';
 
 export default function AuthorCard({ author }) {
   const imageProps = author?.image ? GetImage(author.image) : null;

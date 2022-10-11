@@ -6,7 +6,7 @@ import {
 import createImageUrlBuilder from '@sanity/image-url';
 import { PortableText as PortableTextComponent } from '@portabletext/react';
 import { config } from './config';
-import GetImage from '@/utils/getImage';
+import GetImage from 'src/utils/getImage';
 
 if (!config.projectId) {
   throw Error(

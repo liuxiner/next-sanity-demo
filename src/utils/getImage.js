@@ -1,4 +1,4 @@
-import client from '@/lib/sanity';
+import client from 'src/lib/sanity';
 import { useNextSanityImage } from 'next-sanity-image';
 
 export default function GetImage(image, CustomImageBuilder = null) {

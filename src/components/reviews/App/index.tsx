@@ -1,5 +1,3 @@
-import { Styles } from '@/vibe-styles';
-
 import IconLoading from './assets/loading.svg';
 import IconPrev from './assets/chevron-left.svg';
 import IconNext from './assets/chevron-right.svg';
@@ -7,7 +5,7 @@ import IconNext from './assets/chevron-right.svg';
 import Page from './Page';
 import Stars from './Stars';
 
-const { useCallback, useEffect, useRef, useState } = React;
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 export type ReviewData = {
   stats: {
