@@ -1,6 +1,6 @@
 import React from 'react';
 import BlockContent from '@sanity/block-content-to-react';
-import client from 'src/lib/sanity';
+import client from '@/lib/sanity';
 
 const { projectId, dataset } = client.config();
 

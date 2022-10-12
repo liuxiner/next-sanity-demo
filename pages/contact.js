@@ -1,10 +1,10 @@
 import Container from '@comp/container';
-import Layout from 'src/layout';
-import { getClient } from 'src/lib/sanity';
+import Layout from '@/layout';
+import { getClient } from '@/lib/sanity';
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import useWeb3Forms from 'use-web3forms';
-import { configQuery } from 'src/lib/groq';
+import { configQuery } from '@/lib/groq';
 export default function Contact({ siteconfig }) {
   const {
     register,

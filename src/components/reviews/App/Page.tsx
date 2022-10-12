@@ -1,4 +1,4 @@
-import { Devices } from 'src/vibe-styles';
+import { Devices } from '@/vibe-styles';
 import { ReviewData } from '.';
 import Stars from './Stars';
 

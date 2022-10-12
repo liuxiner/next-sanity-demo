@@ -21,7 +21,7 @@
     "noImplicitThis": true,
     //null/undefined不能作为其他类型的子类型：
     //let a: number = null; //这里会报错.
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     //生成枚举的映射代码
     "preserveConstEnums": true,
     //根目录
@@ -43,13 +43,17 @@
     "skipLibCheck": true,
     "typeRoots": [
       "./node_modules/@types",
-      "./types"
+      "./types",
+      "next-env.d.ts"
     ],
     "paths": {
-      "@css": [
+      "@/*": [
+        "./src/*"
+      ],
+      "@css/*": [
         "./src/assets/css/*"
       ],
-      "@img": [
+      "@img/*": [
         "./src/assets/img/*"
       ],
       "@comp/*": [
@@ -71,6 +75,7 @@
   },
   "include": [
     "next-env.d.ts",
+    "types",
     "**/*.d.ts",
     "**/*.ts",
     "**/*.tsx",
@@ -80,6 +85,5 @@
     "dist",
     ".next",
     "out",
-    "node_modules"
   ]
 }

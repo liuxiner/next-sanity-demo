@@ -2,8 +2,8 @@ import React from 'react';
 import Container from '@comp/container';
 import Link from 'next/link';
 import Image from 'next/image';
-import GetImage from 'src/utils/getImage';
-import { myLoader } from 'src/utils/all';
+import GetImage from '@/utils/getImage';
+import { myLoader } from '@/utils/all';
 
 export default function Navbar(props) {
   const leftmenu = [

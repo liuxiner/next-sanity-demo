@@ -17,3 +17,5 @@ declare global {
 
   const navCart: Promise<NavCart>;
 }
+
+export default NavCart;

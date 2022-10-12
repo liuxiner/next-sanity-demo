@@ -1,4 +1,4 @@
-import { Styles } from 'src/vibe-styles';
+import { Styles } from '@/vibe-styles';
 import { getStarSvg } from '../dom-ui';
 import { useMemo } from 'react';
 

@@ -1,21 +1,21 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import Layout from 'src/layout';
+import Layout from '@/layout';
 import Container from '@comp/container';
 import { useRouter } from 'next/router';
 import client, {
   getClient,
   usePreviewSubscription,
   PortableText
-} from 'src/lib/sanity';
+} from '@/lib/sanity';
 import ErrorPage from 'next/error';
-import GetImage from 'src/utils/getImage';
+import GetImage from '@/utils/getImage';
 import { parseISO, format } from 'date-fns';
 import { NextSeo } from 'next-seo';
 import defaultOG from '/public/img/opengraph.jpg';
 
-import { singlequery, configQuery, pathquery } from 'src/lib/groq';
+import { singlequery, configQuery, pathquery } from '@/lib/groq';
 import CategoryLabel from '@comp/blog/category';
 import AuthorCard from '@comp/blog/authorCard';
 

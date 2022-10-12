@@ -1,15 +1,13 @@
 import { NextSeo } from 'next-seo';
-import Layout from 'src/layout';
+import Layout from '@/layout';
 import Container from '@comp/container';
 import { useRouter } from 'next/router';
-import { getClient, usePreviewSubscription } from 'src/lib/sanity';
-import defaultOG from '/public/img/opengraph.jpg';
-import { postquery, configQuery } from 'src/lib/groq';
-import GetImage from 'src/utils/getImage';
+import { getClient, usePreviewSubscription } from '@/lib/sanity';
+import defaultOG from 'public/img/opengraph.jpg';
+import { postquery, configQuery } from '@/lib/groq';
+import GetImage from '@/utils/getImage';
 import PostList from '@comp/postlist';
-import styled from 'styled-components';
-
-console.log('styled: ', styled);
+import { styled } from 'types';
 
 export default function Post(props) {
   const { postdata, siteconfig, preview } = props;

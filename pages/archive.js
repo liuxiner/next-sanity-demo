@@ -2,15 +2,15 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
-import Layout from 'src/layout';
+import Layout from '@/layout';
 import Container from '@comp/container';
 // import Subpagehero from "@comp/sections/subpagehero";
 // import Categories from "@comp/categories";
 import { useRouter } from 'next/router';
-import { getClient, usePreviewSubscription } from 'src/lib/sanity';
+import { getClient, usePreviewSubscription } from '@/lib/sanity';
 import defaultOG from '/public/img/opengraph.jpg';
-import { postquery, configQuery } from 'src/lib/groq';
-import GetImage from 'src/utils/getImage';
+import { postquery, configQuery } from '@/lib/groq';
+import GetImage from '@/utils/getImage';
 import PostList from '@comp/postlist';
 
 export default function Post(props) {

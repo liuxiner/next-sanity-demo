@@ -1,4 +1,4 @@
-import { Styles } from 'src/vibe-styles';
+import { Styles } from '@/vibe-styles';
 
 export function applyReviewStars() {
   document.querySelectorAll('.reviews-rating-stars').forEach((e) => {

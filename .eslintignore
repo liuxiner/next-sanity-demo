@@ -1,3 +1,6 @@
 
-/studio
+studio/
 *.config.js
+node_modules/
+out/
+dist/
