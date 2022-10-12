@@ -1,11 +1,16 @@
 {
-  "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "react"],
-  "extends": ["next", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "next",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
-    "ecmaVersion": 2020,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "tsx": true
+    }
   },
   "rules": {
     "react/jsx-no-target-blank": [2, { "allowReferrer": true }],

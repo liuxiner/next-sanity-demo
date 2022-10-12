@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 
 export default function Stars({ rating }: { rating: number }) {
   const stars = useMemo(() => {
-    const result = [];
+    const result = [] as any;
 
     const value = Math.max(0, Math.min(5, rating));
     const filledCount = Math.trunc(value);

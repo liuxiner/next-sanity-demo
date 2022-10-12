@@ -1,6 +1,8 @@
 export const Styles = {
   vibeBlue: '#463ff4',
   vibePink: '#ff6666',
+  vibePurple: '#6666cc',
+  vibeYellow: '#ffcc00',
 };
 
 // Keep same breakpoints as website settings.

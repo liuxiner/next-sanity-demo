@@ -4,7 +4,7 @@ import { cx } from '@/utils/all';
 import GetImage from '@/utils/getImage';
 import { parseISO, format } from 'date-fns';
 import CategoryLabel from '@comp/blog/category';
-export default function PostList({ post, aspect, preloadImage }) {
+export default function PostList({ post, aspect, preloadImage = false }) {
   const imageProps = post?.mainImage
     ? GetImage(post.mainImage)
     : null;

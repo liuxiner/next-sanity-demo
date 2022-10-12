@@ -1,6 +1,9 @@
 import IconLoading from './assets/loading.svg';
 import IconPrev from './assets/chevron-left.svg';
 import IconNext from './assets/chevron-right.svg';
+import { Styles } from '@/vibe-styles';
+import ReactDOM from 'react-dom';
+console.log('ReactDOM: ', ReactDOM);
 
 import Page from './Page';
 import Stars from './Stars';
@@ -144,7 +147,7 @@ function PageNavigator({
     return null;
   }
 
-  const pages = [];
+  const pages = [] as any;
   for (let page = 1; page <= data.reviews.last_page; page++) {
     const p = (
       <span
