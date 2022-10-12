@@ -4,8 +4,7 @@ import { getClient, usePreviewSubscription } from '@/lib/sanity';
 import defaultOG from 'public/img/opengraph.jpg';
 import { postquery, configQuery } from '@/lib/groq';
 import GetImage from '@/utils/getImage';
-import { styled } from 'types';
-import 
+import { HeroSection, ProductCardSection } from './sections';
 
 export default function Post(props) {
   const { postdata, siteconfig, preview } = props;
@@ -30,8 +29,8 @@ export default function Post(props) {
     <>
       {posts && siteConfig && (
         <Layout {...siteConfig}>
-          
-
+          <HeroSection  />
+          <ProductCardSection />
         </Layout>
       )}
     </>
