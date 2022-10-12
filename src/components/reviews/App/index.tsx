@@ -1,3 +1,4 @@
+// @ts-nocheck
 import IconLoading from './assets/loading.svg';
 import IconPrev from './assets/chevron-left.svg';
 import IconNext from './assets/chevron-right.svg';

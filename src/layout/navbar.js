@@ -19,6 +19,10 @@ export default function Navbar(props) {
       label: 'Archive',
       href: '/archive'
     },
+    {
+      label: 'Test',
+      href: '/test2'
+    },
   ];
 
   const rightmenu = [
