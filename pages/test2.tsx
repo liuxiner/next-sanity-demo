@@ -1,13 +1,14 @@
 import { NextSeo } from 'next-seo';
 import Layout from '@/layout';
-import Container from '@comp/container';
 import { useRouter } from 'next/router';
 import { getClient, usePreviewSubscription } from '@/lib/sanity';
 import defaultOG from 'public/img/opengraph.jpg';
 import { postquery, configQuery } from '@/lib/groq';
 import GetImage from '@/utils/getImage';
 import PostList from '@comp/postlist';
+import { initialize as initReviewsApp } from '@comp/reviews';
 import { styled } from 'types';
+import { useEffect } from 'react';
 
 export default function Post(props) {
   const { postdata, siteconfig, preview } = props;
@@ -26,9 +27,12 @@ export default function Post(props) {
   });
   //console.log(posts);
   const siteImg = GetImage(siteConfig?.openGraphImage) || { src: null };
-  console.log('siteImg: ', siteImg);
   const ogimage = siteImg.src || defaultOG.src;
-  console.log('ogimage: ', ogimage);
+  useEffect(() => {
+    initReviewsApp('N55S1');
+
+  });
+
   return (
     <>
       {posts && siteConfig && (
@@ -76,6 +80,8 @@ export default function Post(props) {
               ))}
             </div>
           </S.Container>
+
+          <div id="reviews-app"></div>
         </Layout>
       )}
     </>
@@ -100,7 +106,7 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 const S = {
-  Container: styled.span`
+  Container: styled.div`
     display: flex;
     gap: 2px;
   `,

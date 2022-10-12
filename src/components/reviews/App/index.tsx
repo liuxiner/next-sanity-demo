@@ -3,8 +3,7 @@ import IconPrev from './assets/chevron-left.svg';
 import IconNext from './assets/chevron-right.svg';
 import { Styles } from '@/vibe-styles';
 import ReactDOM from 'react-dom';
-console.log('ReactDOM: ', ReactDOM);
-
+import { styled } from 'types';
 import Page from './Page';
 import Stars from './Stars';
 

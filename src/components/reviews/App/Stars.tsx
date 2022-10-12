@@ -2,6 +2,8 @@ import { Styles } from '@/vibe-styles';
 import { getStarSvg } from '../dom-ui';
 import { useMemo } from 'react';
 
+import { styled } from 'types';
+
 export default function Stars({ rating }: { rating: number }) {
   const stars = useMemo(() => {
     const result = [] as any;
