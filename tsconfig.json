@@ -40,7 +40,7 @@
     //允许export=导出，由import from 导入
     "esModuleInterop": true,
     //忽略所有的声明文件（ *.d.ts）的类型检查。
-    "skipLibCheck": true,
+    // "skipLibCheck": true,
     "typeRoots": [
       "./node_modules/@types",
       "./types",
@@ -58,9 +58,6 @@
       ],
       "@comp/*": [
         "./src/components/*"
-      ],
-      "@studio/*": [
-        "./studio/*"
       ]
     },
     "incremental": true,
@@ -85,6 +82,7 @@
   "exclude": [
     "dist",
     ".next",
-    "out"
+    "out",
+    "studio"
   ]
 }
