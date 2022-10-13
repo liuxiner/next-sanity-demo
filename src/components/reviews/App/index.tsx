@@ -3,8 +3,8 @@ import IconLoading from './assets/loading.svg';
 import IconPrev from './assets/chevron-left.svg';
 import IconNext from './assets/chevron-right.svg';
 import { Styles } from '@/vibe-styles';
-import ReactDOM from 'react-dom';
-import { styled } from 'types';
+import { createRoot } from 'react-dom/client';
+
 import Page from './Page';
 import Stars from './Stars';
 
@@ -240,10 +240,11 @@ const S = {
 };
 
 export function renderApp({ sku }: { sku: string }) {
-  const root = document.getElementById('reviews-app');
-  if (!root) {
-    return Promise.reject('Cannot find root element.');
+  const container = document.getElementById('reviews-app');
+  if (!container) {
+    return Promise.reject('Cannot find root container element.');
   }
 
-  ReactDOM.render(<App sku={sku} />, root);
+  const root = createRoot(container);
+  root.render(<App sku={sku} />);
 }

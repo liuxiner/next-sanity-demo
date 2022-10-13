@@ -69,7 +69,8 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "isolatedModules": true,
-    "strict": false
+    "strict": false,
+    "skipLibCheck": true
   },
   "include": [
     "next-env.d.ts",

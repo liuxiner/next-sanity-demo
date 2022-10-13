@@ -7,7 +7,7 @@ import { postquery, configQuery } from '@/lib/groq';
 import GetImage from '@/utils/getImage';
 import PostList from '@comp/postlist';
 import { initialize as initReviewsApp } from '@comp/reviews';
-import { styled } from 'types';
+
 import { useEffect } from 'react';
 
 export default function Post(props) {

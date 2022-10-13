@@ -30,6 +30,11 @@ module.exports = {
       '@css': path.resolve(__dirname, 'src/assets/css'),
       '@img': path.resolve(__dirname, 'src/assets/img'),
     };
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+        'styled': ['styled-components', 'default']
+      })
+    )
     return config;
   }
 };

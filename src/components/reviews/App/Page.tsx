@@ -1,7 +1,7 @@
 import { Devices } from '@/vibe-styles';
 import { ReviewData } from '.';
 import Stars from './Stars';
-import { styled } from 'types';
+
 
 export default function Page({ data }: { data: ReviewData | null }) {
   if (!data) {
