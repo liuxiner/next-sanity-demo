@@ -5,7 +5,7 @@
     "module": "esnext",
     //	启用所有严格类型检查选项。
     //启用 --strict相当于启用 --noImplicitAny, --noImplicitThis, --alwaysStrict， --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization。
-    "strict": true,
+    // "strict": true,
     // 允许编译器编译JS，JSX文件
     "allowJs": true,
     // 允许在JS文件中报错，通常与allowJS一起使用
@@ -71,7 +71,8 @@
     ],
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "strict": false
   },
   "include": [
     "next-env.d.ts",
@@ -84,6 +85,6 @@
   "exclude": [
     "dist",
     ".next",
-    "out",
+    "out"
   ]
 }
