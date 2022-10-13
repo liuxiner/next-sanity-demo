@@ -1,6 +1,7 @@
 # Next Sanity Demo - Next.js & Sanity CMS
 
-**[Click here to see live demo →](https://stablo-template.vercel.app/)**
+**[Click here to see live demo →](https://demo.dzrlab.top/)**
+**[Click here to edit sanity data →](https://demo.dzrlab.top/studio/)**
 
 ###### Click the above button for one-click clone & deploy for this template. Read [quick start](#quick-start) guide below. 
 
@@ -18,41 +19,6 @@ To use this template and configure sanity and deploying to vercel, we recommend 
 - Import Demo Content (as seen in live demo)
 - Deploy to Vercel
  
-## Local Development
-
-Again, we recommend you to use the one-click deploy first which will create a github repo. You can then clone the github repo to your local system and change following `.env` variables. 
-
-1. ~root/`.env.local`
-
-Change `.env.local.example` placed in the root folder and rename it to `.env.local` and add your sanity project ID. Get it from https://sanity.io/manage
-
-```
-NEXT_PUBLIC_SANITY_PROJECT_ID=xxyyzz
-```
-
-2. `/studio/.env.development` or `/studio/sanity.json`
-
-To develop sanity cms locally, you also need to add the Project ID and Dataset in either `.env` or in `sanity.json` file.
-
-```
-# .env.development
-SANITY_STUDIO_API_PROJECT_ID=xxyyzz
-SANITY_STUDIO_API_DATASET=production
-
-```
-or you can directly replace the project ID in the `/studio/sanity.json`
-
-```js
-// sanity.json
-  // ...
-  "api": {
-    "projectId": "xxyyzz",
-    "dataset": "production"
-  },
-  // ...
-```
-
-
 ### Run Next.js frontend
 
 You can use the normal Next.js method to run the frontend. Just run the following command and a live server will open on `http://localhost:3000`
@@ -60,6 +26,7 @@ You can use the normal Next.js method to run the frontend. Just run the followin
 ```
 pnpm i
 pnpm dev
+pnpm start (`pnpm build` before it)
 ```
 
 
@@ -80,7 +47,3 @@ pnpm sanity
 # or
 cd studio && pnpm start
 ```
-
-## Sponsor
-
-<a href="https://vercel.com/?utm_source=web3templates&amp;utm_campaign=oss" rel="nofollow"><img src="https://camo.githubusercontent.com/37b009b52b3a9af7886f52e75cd76d1b32fef331ab1dc2108089c0ced0b7635f/68747470733a2f2f7777772e6461746f636d732d6173736574732e636f6d2f33313034392f313631383938333239372d706f77657265642d62792d76657263656c2e737667" alt="image" style="max-width: 70%;"></a>
