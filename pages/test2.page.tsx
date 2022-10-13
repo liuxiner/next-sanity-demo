@@ -8,8 +8,7 @@ import GetImage from '@/utils/getImage';
 import PostList from '@comp/postlist';
 import { initialize as initReviewsApp } from '@comp/reviews';
 
-import { useEffect } from 'react';
-
+const { useEffect } = React;
 export default function Post(props) {
   const { postdata, siteconfig, preview } = props;
 

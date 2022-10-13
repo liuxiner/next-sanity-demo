@@ -32,7 +32,8 @@ module.exports = {
     };
     config.plugins.push(
       new webpack.ProvidePlugin({
-        'styled': ['styled-components', 'default']
+        'styled': ['styled-components', 'default'],
+        'React': 'react'
       })
     )
     return config;

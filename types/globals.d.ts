@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from 'react';
 
 type NavCart = {
   setActive: (visible: boolean) => void;
@@ -6,6 +7,7 @@ type NavCart = {
 };
 
 declare global {
+  const React: React;
   const styled: styled;
   const affirm: any;
   const Extend: any;

@@ -1,6 +1,4 @@
-import React from 'react';
 import { FC } from 'react';
-
 
 export const Section: FC = (props: any) => {
   const { children } = props;
@@ -16,6 +14,7 @@ export const Section: FC = (props: any) => {
 
 import { Devices } from '@/vibe-styles';
 const S = {
+  
   Section: styled.div`
     
   `,
@@ -29,4 +28,3 @@ const S = {
     }
   `
 };
-
