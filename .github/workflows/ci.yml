@@ -3,11 +3,11 @@ name: 'CI'
 on:
   push:
     branches:
-      - main
+      - master
       - live
   pull_request:
     branches:
-      - main
+      - master
       - live
     types: [opened, synchronize, reopened, ready_for_review]
 
