@@ -1,0 +1,41 @@
+name: 'CI'
+
+on:
+  push:
+    branches:
+      - main
+      - live
+  pull_request:
+    branches:
+      - main
+      - live
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  main:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        run: npm install yarn && yarn install
+
+      - name: Test Build
+        run: yarn build 
+
+      - name: Deploy to Alibaba Cloud
+        uses: appleboy/ssh-action@master
+        # uses: easingthemes/ssh-deploy@v2.1.1
+        with:
+          host: ${{ secrets.ALIYUN_SERVER_IP }}
+          username: ${{ secrets.ALIYUN_SERVER_USERNAME }}
+          password: ${{ secrets.ALIYUN_SERVER_PASSWORD }}
+          script: |
+            cd  /root/web/frontd/next-sanity-demo
+            git pull
+            yarn install
+            yarn deploy:prod
