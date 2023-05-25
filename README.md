@@ -18,6 +18,8 @@ To use this template and configure sanity and deploying to vercel, we recommend 
 - Deploy Sanity Studio - Content Manager
 - Import Demo Content (as seen in live demo)
 - Deploy to Vercel
+
+test
  
 ### Run Next.js frontend
 
